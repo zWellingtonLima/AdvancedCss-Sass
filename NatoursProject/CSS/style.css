@@ -105,6 +105,18 @@ height: 35px;
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -129,6 +141,7 @@ height: 35px;
 .btn-white {
   background-color: white;
   color: #777;
+  font-weight: 700;
 }
 
 .btn::after {
@@ -136,7 +149,7 @@ height: 35px;
   display: inline-block;
   height: 100%;
   width: 100%;
-  border: 100px;
+  border-radius: 100px;
   position: absolute;
   top: 0;
   left: 0;
@@ -153,4 +166,8 @@ height: 35px;
   opacity: 0;  
 }
 
+.btn-animated{
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
 /* HEADER ENDS */

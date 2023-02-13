@@ -4,7 +4,7 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass -watch NatoursProject/sass/main.scss -o NatoursProject/CSS/style.css"
   },
   "repository": {
     "type": "git",

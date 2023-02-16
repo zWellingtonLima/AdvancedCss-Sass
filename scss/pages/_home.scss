@@ -7,5 +7,16 @@
 .section-container {
   max-width: 120rem;
   display: flex;
-  
+  justify-content: center;
+  margin: auto;
+}
+
+.section-text{
+  flex: 0 1 60%;
+  padding: 3rem;
+}
+
+.section-imgs {
+  flex: 0 1 40%;
+  padding: 3rem;
 }

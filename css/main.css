@@ -157,13 +157,13 @@ body {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.section-text--title {
+.section__text--title {
   font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.section-text--paragraph {
+.section__text--paragraph {
   font-size: 1.8rem;
   margin-bottom: 3rem;
 }
@@ -268,6 +268,44 @@ body {
           transform: translateY(0px);
 }
 
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 60%;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  position: absolute;
+  outline-offset: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.composition__photo--p1 {
+  left: 0;
+  top: -3rem;
+}
+.composition__photo--p2 {
+  right: 0;
+  top: 2rem;
+}
+.composition__photo--p3 {
+  left: 20%;
+  top: 10rem;
+}
+.composition__photo:hover {
+  outline: 1.5rem solid #55c57a;
+  z-index: 1;
+  -webkit-transform: scale(1.15) translateY(-0.5rem);
+          transform: scale(1.15) translateY(-0.5rem);
+  -webkit-box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.5);
+}
+.composition:hover .composition__photo:not(:hover) {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 .header {
   height: 95vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg");
@@ -302,7 +340,7 @@ body {
 }
 
 .section-container {
-  max-width: 120rem;
+  max-width: 140rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,16 +350,16 @@ body {
   margin: auto;
 }
 
-.section-text {
+.section__text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 60%;
-          flex: 0 1 60%;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
   padding: 3rem;
 }
 
-.section-imgs {
+.section__imgs {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 40%;
-          flex: 0 1 40%;
-  padding: 3rem;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 1rem;
 }

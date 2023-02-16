@@ -5,18 +5,18 @@
 }
 
 .section-container {
-  max-width: 120rem;
+  max-width: 140rem;
   display: flex;
   justify-content: center;
   margin: auto;
 }
 
-.section-text{
-  flex: 0 1 60%;
+.section__text{
+  flex: 0 1 50%;
   padding: 3rem;
 }
 
-.section-imgs {
-  flex: 0 1 40%;
-  padding: 3rem;
+.section__imgs {
+  flex: 0 1 50%;
+  padding: 1rem;
 }

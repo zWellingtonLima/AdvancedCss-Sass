@@ -1,6 +1,6 @@
 .section-about {
   background-color: $color-grey-light-1;
-  padding: 25rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -20vh;
 }
 
@@ -19,4 +19,20 @@
 .section__imgs {
   flex: 0 1 50%;
   padding: 1rem;
+}
+
+.features-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+  url('../../img/nat-4.jpg');
+  background-size: cover;
+
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  margin-top: -5%;
 }

@@ -426,3 +426,24 @@ body {
           clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   margin-top: -19rem;
 }
+
+.tours {
+  height: 100vh;
+  padding: 20rem 0 25rem 0;
+  margin-top: -20rem;
+  background-color: #f7f7f7;
+}
+.tours__title {
+  margin-top: 5rem;
+}
+.tours-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}

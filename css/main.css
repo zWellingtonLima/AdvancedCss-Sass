@@ -184,6 +184,10 @@ body {
   margin-bottom: 8rem;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
 .btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
@@ -219,6 +223,14 @@ body {
 }
 .btn--white::after {
   background-color: white;
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+  font-weight: 700;
+}
+.btn--green::after {
+  background-color: #55c57a;
 }
 .btn::after {
   content: "";
@@ -335,12 +347,12 @@ body {
   background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url("../img/nat-5.jpg");
 }
 .card__picture--2 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#20a77a)), url("../img/nat-5.jpg");
-  background-image: linear-gradient(to bottom right, #7ed56f, #20a77a), url("../img/nat-5.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#20a77a)), url("../img/nat-6.jpg");
+  background-image: linear-gradient(to bottom right, #7ed56f, #20a77a), url("../img/nat-6.jpg");
 }
 .card__picture--3 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url("../img/nat-5.jpg");
-  background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url("../img/nat-5.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url("../img/nat-7.jpg");
+  background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url("../img/nat-7.jpg");
 }
 .card__heading {
   font-size: 2.8rem;
@@ -351,7 +363,7 @@ body {
   position: absolute;
   top: 12rem;
   right: 2rem;
-  width: 75%;
+  width: 70%;
 }
 .card__heading-span {
   padding: 1rem 1.5rem;
@@ -361,6 +373,14 @@ body {
 .card__heading-span--1 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.85)), to(rgba(255, 119, 48, 0.85)));
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+.card__heading-span--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.85)), to(rgba(32, 167, 122, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(32, 167, 122, 0.85));
+}
+.card__heading-span--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.85)), to(rgba(86, 67, 250, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
 }
 .card__details {
   padding: 3rem;
@@ -378,6 +398,37 @@ body {
 }
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid #ddd;
+}
+.card__cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 52rem;
+}
+.card__price-box {
+  color: #fff;
+}
+.card__price-only {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.card__price-value {
+  font-size: 7rem;
+  font-weight: 100;
+}
+.card__btn {
+  width: 65%;
+  margin: -8rem auto 0 auto;
 }
 
 .composition {
@@ -540,8 +591,7 @@ body {
 }
 
 .tours {
-  height: 100vh;
-  padding: 20rem 0 25rem 0;
+  padding: 20rem 0 13rem 0;
   margin-top: -20rem;
   background-color: #f7f7f7;
 }

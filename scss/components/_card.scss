@@ -52,8 +52,6 @@
     transform: rotateY(0);
   }
 
-
-  
   // FrontSide Styling
   &__picture {
     background-size: cover;
@@ -68,12 +66,12 @@
 
     &--2 {
       background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark),
-      url('../img/nat-5.jpg');
+      url('../img/nat-6.jpg');
     }
 
     &--3 {
       background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark),
-      url('../img/nat-5.jpg');
+      url('../img/nat-7.jpg');
     }
   }
 
@@ -86,7 +84,7 @@
     position: absolute;
     top: 12rem;
     right: 2rem;
-    width: 75%;
+    width: 70%;
   }
   
   &__heading-span {
@@ -98,6 +96,18 @@
       background-image: linear-gradient(to right bottom, 
       rgba($color-secondary-light, .85),
       rgba($color-secondary-dark, .85));
+    }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, 
+      rgba($color-primary-light, .85),
+      rgba($color-primary-dark, .85));
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, 
+      rgba($color-tertiary-light, .85),
+      rgba($color-tertiary-dark, .85));
     }
   }
 
@@ -120,4 +130,33 @@
       }
     }
   }
+  //BackSide Styling
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    height: 52rem;
+  }
+
+  &__price-box{
+    color:$color-white; // os filhos Vão herdar
+  }
+
+  &__price-only {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 7rem;
+    font-weight: 100;
+  }
+
+  &__btn {
+    width: 65%;
+    margin: -8rem auto 0 auto;
+  }  
 }

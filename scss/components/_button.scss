@@ -35,6 +35,16 @@
       background-color: white;
     }
   }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: 700;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
   
   &::after {
     content: "";

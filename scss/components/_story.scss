@@ -1,5 +1,23 @@
+.story-container {
+  display: flex;
+  justify-content: center;
+}
+
 .story {
   width: 75%;
+  display: flex;
+  background-color: $color-white;
+  box-shadow: 0 3rem 6rem rgba($color-black, .1);
+  padding: 6rem;
+  border-radius: 5px;
+  font-size: $default-font-size;
+
+  &__shape {
+    flex: 0 0 15rem;
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+  }
 }
 
 @mixin respond-phone {

@@ -157,6 +157,11 @@ body {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+.heading-tertiary {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 .section__text--title {
   font-size: 1.8rem;
   font-weight: 700;
@@ -510,6 +515,36 @@ body {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+}
+
+.story-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.story {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  padding: 6rem;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+.story__shape {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15rem;
+          flex: 0 0 15rem;
+  width: 15rem;
+  height: 15rem;
+  background-color: orangered;
 }
 
 .header {

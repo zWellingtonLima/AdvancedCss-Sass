@@ -1,22 +1,39 @@
-.story-container {
-  display: flex;
-  justify-content: center;
-}
+// .story-container {
+//   display: flex;
+//   justify-content: center;
+// }
 
 .story {
+  margin: 0 auto;
   width: 75%;
-  display: flex;
+  // display: flex;
   background-color: $color-white;
   box-shadow: 0 3rem 6rem rgba($color-black, .1);
   padding: 6rem;
+  padding-left: 9rem;
   border-radius: 5px;
   font-size: $default-font-size;
+  transform: skewX(-12deg);
 
   &__shape {
-    flex: 0 0 15rem;
+    content: "";
+    float: left;
+    // flex: 0 0 15rem;
     width: 15rem;
     height: 15rem;
     background-color: orangered;
+    -webkit-shape-outside: content-box circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__text {
+    transform: skewX(12deg);
   }
 }
 

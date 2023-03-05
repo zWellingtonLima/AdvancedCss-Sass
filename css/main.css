@@ -189,6 +189,10 @@ body {
   margin-bottom: 8rem;
 }
 
+.u-margin-top-medium {
+  margin-top: 4rem;
+}
+
 .u-margin-top-big {
   margin-top: 8rem;
 }
@@ -517,34 +521,37 @@ body {
   color: transparent;
 }
 
-.story-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .story {
+  margin: 0 auto;
   width: 75%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-color: #fff;
   -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   padding: 6rem;
+  padding-left: 9rem;
   border-radius: 5px;
   font-size: 1.8rem;
+  -webkit-transform: skewX(-12deg);
+          transform: skewX(-12deg);
 }
 .story__shape {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 15rem;
-          flex: 0 0 15rem;
+  content: "";
+  float: left;
   width: 15rem;
   height: 15rem;
   background-color: orangered;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-3rem) skewX(12deg);
+          transform: translateX(-3rem) skewX(12deg);
+}
+.story__img {
+  height: 100%;
+}
+.story__text {
+  -webkit-transform: skewX(12deg);
+          transform: skewX(12deg);
 }
 
 .header {

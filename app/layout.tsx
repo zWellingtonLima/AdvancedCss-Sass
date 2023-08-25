@@ -6,7 +6,7 @@ const lato = Lato({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Natours",
-  description: "Natours landing page",
+  description: "Natours landing page | Exciting tours for adventurous people",
 };
 
 export default function RootLayout({

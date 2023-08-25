@@ -6,7 +6,7 @@ import HeadingPrimary from "../HeadingPrimary";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logoBox}>
+      <div className={styles.header__logoBox}>
         <Image
           alt="Natours logo"
           className="logo"
@@ -15,10 +15,10 @@ const Header = () => {
           src="/images/logo-white.png"
         />
       </div>
-      <div className={styles.textBox}>
+      <div className={styles.header__textBox}>
         <HeadingPrimary />
 
-        <a href="#" className={`${styles.btnAnimated} ${styles.btn} ${styles.btnWhite}`}>
+        <a href="#" className={`${styles.btn_animated} ${styles.btn} ${styles.btn_white}`}>
           Discover our tours
         </a>
       </div>

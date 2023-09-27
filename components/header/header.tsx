@@ -9,7 +9,6 @@ const Header = () => {
       <div className={styles.header__logoBox}>
         <Image
           alt="Natours logo"
-          className="logo"
           width={80}
           height={40}
           src="/images/logo-white.png"

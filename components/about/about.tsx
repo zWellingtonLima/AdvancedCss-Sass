@@ -44,6 +44,7 @@ const About = () => {
         </div>
         <div className={styles.compositionLayout}>
           <div className={styles.composition}>
+            {/* TODO: Fix props in Images */}
             <Image
               src={compPhoto1}
               width={1000}

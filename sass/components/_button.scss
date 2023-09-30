@@ -1,6 +1,8 @@
 .btn {
+  &,
   &:link,
   &:visited {
+    border: none;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -27,7 +29,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:hover {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.4);
   }

@@ -93,6 +93,10 @@
   margin-bottom: 2rem;
 }
 
+.uMarginBottomMedium {
+  margin-bottom: 4rem;
+}
+
 .uMarginBottomBig {
   margin-bottom: 8rem;
 }
@@ -115,7 +119,8 @@
   object-fit: cover;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
+  border: none;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -138,7 +143,8 @@
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
-.btn:active {
+.btn:active, .btn:hover {
+  outline: none;
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
 }
@@ -249,6 +255,89 @@
 }
 .featureBox:hover {
   transform: translateY(-1.5rem) scale(1.03);
+}
+
+.form_group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form_input {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  color: inherit;
+  font-family: inherit;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  width: 90%;
+  border-bottom: 3px solid transparent;
+  display: block;
+  transition: all 0.3s;
+}
+.form_input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #55c57a;
+}
+.form_input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+.form_input:focus:valid {
+  border-bottom: 3px solid #28b485;
+}
+.form_input::-webkit-input-placeholder {
+  color: #999;
+}
+.form_label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+}
+.form_input:placeholder-shown + .form_label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+.form_radio_input {
+  display: none;
+}
+.form_group_radios_check {
+  display: flex;
+  justify-content: space-between;
+}
+.form_radio_group {
+  width: 40%;
+  display: inline-block;
+}
+.form_radio_label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.form_radio_button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #55c57a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form_radio_button::after {
+  content: "";
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  background-color: #55c57a;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.form_radio_input:checked ~ .form_radio_label .form_radio_button::after {
+  opacity: 1;
 }
 
 .toursCardLayout {
@@ -491,6 +580,25 @@
 .sectionStories {
   padding: 10rem 0;
   position: relative;
+}
+
+.sectionBook {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../public/images/nat-10.jpg);
+  background-size: cover;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.3);
+  height: 50rem;
+}
+.book_form {
+  width: 50%;
+  padding: 4rem;
 }
 
 /*# sourceMappingURL=page.module.css.map */

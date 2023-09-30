@@ -1,0 +1,60 @@
+.story {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: rgba($color-white, .6);
+  border-radius: 3px;
+  padding: 4rem;
+  font-size: $default-font-size;
+  gap: 2rem;
+  align-items: center;
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skew(12deg);
+  }
+
+  &Shape {
+    position: relative;
+    width: 15rem;
+    min-width: 15rem;
+    height: 15rem;
+
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &Image {
+    transform: scale(1.3);
+    transition: all 0.2s;
+  }
+
+  &ImageCaption {
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: bold;
+    color: $color-white;
+    font-size: 1.8rem;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
+  &:hover &ImageCaption {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+  }
+
+  &:hover &Image {
+    transform: scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+}

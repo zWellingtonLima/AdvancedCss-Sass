@@ -1,0 +1,97 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: $default-font-size;
+  }
+
+  &_animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+    font-weight: bold;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:hover {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.4);
+  }
+
+  &_white {
+    background-color: white;
+    color: #777;
+
+    &::after {
+      background-color: white;
+    }
+  }
+
+  &_green {
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: bold;
+
+    &::after {
+      background-color: $color-primary-dark;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+}
+
+.btnText {
+  &:link,
+  &:visited {
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 0.6rem 1.2rem;
+    font-size: $default-font-size;
+    transition: all 0.2s;
+    border-radius: 1rem;
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: white;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 0.8rem rgba($color-black, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 0.3rem rgba($color-black, 0.2);
+  }
+}

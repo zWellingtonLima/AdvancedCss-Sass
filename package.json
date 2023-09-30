@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "compile:sass": "sass sass/main.module.scss app/page.module.css -w"
   },
   "dependencies": {
     "@types/node": "20.5.4",
@@ -14,9 +15,13 @@
     "@types/react-dom": "18.2.7",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
+    "lucide-react": "^0.279.0",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "sass": "^1.66.1"
   }
 }

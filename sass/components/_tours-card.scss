@@ -1,0 +1,192 @@
+.toursCardLayout {
+  display: flex;
+  max-width: 140rem;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.toursCard {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 50rem;
+  width: 30rem;
+  position: relative;
+
+  &Side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    height: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.8s ease;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  }
+
+  &Side__front {
+    background-color: $color-white;
+  }
+
+  &Side__back {
+    background-color: orange;
+    transform: rotateY(180deg);
+
+    &_1 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secondary-light,
+        $color-secondary-dark
+      );
+    }
+
+    &_2 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+      );
+    }
+
+    &_3 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-tertiary-light,
+        $color-tertiary-dark
+      );
+    }
+  }
+
+  &:hover &Side__front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &Side__back {
+    transform: rotateY(0);
+  }
+
+  // Frontside Styling
+  &_picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &__1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url("../public/images/nat-5.jpg");
+    }
+
+    &__2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url("../public/images/nat-6.jpg");
+    }
+
+    &__3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url("../public/images/nat-7.jpg");
+    }
+  }
+
+  &_heading {
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 75%;
+  }
+
+  &_headingSpan {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &__1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+
+    &__2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+
+    &__3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
+  }
+
+  &_details {
+    padding: 1rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+      list-style: none;
+      flex: 1;
+    }
+
+    li {
+      padding: 1rem;
+      font-size: 1.6rem;
+
+      &:not(:last-child) {
+        border-bottom: 2px solid $color-grey-light-1;
+      }
+    }
+  }
+
+  // Backside styling
+  &_cta {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+  }
+
+  &_priceBox_only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &_priceBox_value {
+    font-size: 7rem;
+    font-weight: 100;
+  }
+}

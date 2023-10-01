@@ -601,4 +601,43 @@
   padding: 4rem;
 }
 
+.footer {
+  background-color: #333;
+  padding: 15rem 0;
+  font-size: 1.4rem;
+}
+.footer_logoBox {
+  position: relative;
+  height: 12rem;
+  margin-bottom: 6rem;
+}
+.footer_bottom {
+  display: flex;
+  justify-content: space-around;
+}
+.footer_navigation {
+  padding-top: 3rem;
+  border-top: 1px solid #777;
+  font-weight: bold;
+}
+.footer_list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.footer_copyright {
+  padding-top: 3rem;
+  color: #999;
+  border-top: 1px solid #777;
+}
+.footer_link:link, .footer_link:visited {
+  color: #f7f7f7;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.footer_link:hover, .footer_link:active {
+  color: #55c57a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+}
+
 /*# sourceMappingURL=page.module.css.map */

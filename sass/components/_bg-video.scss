@@ -1,16 +1,14 @@
-.bg-video {
+.bgVideo {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .15;
+  opacity: .2;
   overflow: hidden;
 
-  &__content {
+  &_content {
     object-fit: cover;
-    height: 100%;
-    width: 100%;
   }
 }

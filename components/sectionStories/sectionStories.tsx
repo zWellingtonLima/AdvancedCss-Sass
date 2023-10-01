@@ -22,7 +22,7 @@ const SectionStories = () => {
       </div>
 
       <div className={styles.story}>
-        {/* Transform this into a component*/}
+        {/* TODO: Transform this into a component*/}
         <figure className={styles.storyShape}>
           <Image
             alt="Person on a tour"

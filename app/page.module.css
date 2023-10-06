@@ -1,3 +1,10 @@
+/* 
+0 - 600px       Phone
+600px - 900px   Tablet Portrait
+900px - 1200px  Tablet Landscape
+1200px - 1800px (Where normal styles apply)
+1800px +        Big desktop
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -116,6 +123,10 @@
 
 .uMarginTop {
   margin-top: 8rem;
+}
+
+.uMarginTopMedium {
+  margin-top: 4rem;
 }
 
 .bgVideo {
@@ -481,6 +492,83 @@
   font-weight: 100;
 }
 
+.toursModal {
+  animation: moveInBottom 1s ease;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  width: 100vw;
+  z-index: 6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toursModal_baseLayout {
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 3px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.toursModal_photos {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.toursModal_photos_layout {
+  position: inherit;
+  width: 100%;
+  height: 100%;
+}
+.toursModal_off {
+  display: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+  position: relative;
+  justify-content: center;
+  gap: 2rem;
+}
+.content_button {
+  border: none;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.2s;
+  border-radius: 50%;
+}
+.content_button:hover {
+  background-color: #ddd;
+}
+.content_paragraph {
+  color: #333;
+}
+.content_info {
+  color: #777;
+  font-weight: bold;
+  gap: 1.5rem;
+  display: flex;
+  font-size: 1.6rem;
+}
+.content_info_detail {
+  border-right: 1px solid #ddd;
+}
+.content_cta {
+  align-self: flex-start;
+}
+
 .story {
   display: flex;
   width: 60%;
@@ -575,6 +663,10 @@
   justify-content: center;
   align-items: center;
   color: #28b485;
+  transition: all 0.3s;
+}
+.navigation_button:hover {
+  color: #7ed56f;
 }
 .navigation_bg {
   z-index: 2;

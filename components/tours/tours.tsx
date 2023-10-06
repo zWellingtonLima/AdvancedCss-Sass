@@ -1,6 +1,11 @@
+"use client";
+
 import styles from "@/app/page.module.css";
+import { useStoreModal } from "@/hooks/useModalStore";
 
 const ToursPage = () => {
+  const { onOpen } = useStoreModal();
+
   return (
     <section className={styles.sectionTours}>
       <div className={styles.uCenterText}>
@@ -130,12 +135,12 @@ const ToursPage = () => {
                   <p className={styles.toursCard_priceBox_only}>Only</p>
                   <p className={styles.toursCard_priceBox_value}>$897</p>
                 </div>
-                <a
+                <button
+                  onClick={onOpen}
                   className={`${styles.btn_animated} ${styles.btn_white} ${styles.btn}`}
-                  href="#"
                 >
                   Book now!
-                </a>
+                </button>
               </div>
             </div>
           </div>

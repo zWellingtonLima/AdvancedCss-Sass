@@ -1,10 +1,26 @@
 "use client";
 
+import { useEffect } from "react";
+
 import styles from "@/app/page.module.css";
 import { useStoreModal } from "@/hooks/useModalStore";
 
 const ToursPage = () => {
-  const { onOpen } = useStoreModal();
+  const { onOpen, onClose } = useStoreModal();
+
+  useEffect(() => {
+    const handleCloseModal = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleCloseModal);
+
+    return () => {
+      window.removeEventListener("keydown", handleCloseModal);
+    };
+  }, [onClose]);
 
   return (
     <section className={styles.sectionTours}>
@@ -49,12 +65,13 @@ const ToursPage = () => {
                   <p className={styles.toursCard_priceBox_only}>Only</p>
                   <p className={styles.toursCard_priceBox_value}>$297</p>
                 </div>
-                <a
+                <button
+                  onClick={onOpen}
                   className={`${styles.btn_animated} ${styles.btn_white} ${styles.btn}`}
-                  href="#"
                 >
+                  {/* TODO: add a page to BOOK NOW and push user to it */}
                   Book now!
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -92,12 +109,12 @@ const ToursPage = () => {
                   <p className={styles.toursCard_priceBox_only}>Only</p>
                   <p className={styles.toursCard_priceBox_value}>$497</p>
                 </div>
-                <a
+                <button
+                  onClick={onOpen}
                   className={`${styles.btn_animated} ${styles.btn_white} ${styles.btn}`}
-                  href="#"
                 >
                   Book now!
-                </a>
+                </button>
               </div>
             </div>
           </div>

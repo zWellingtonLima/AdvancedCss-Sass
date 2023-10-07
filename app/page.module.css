@@ -493,7 +493,7 @@
 }
 
 .toursModal {
-  animation: moveInBottom 1s ease;
+  animation: moveInBottom 0.5s ease;
   background-color: rgba(0, 0, 0, 0.9);
   height: 100vh;
   width: 100vw;
@@ -515,6 +515,7 @@
   height: 70vh;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  z-index: 7;
 }
 .toursModal_photos {
   position: relative;

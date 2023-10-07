@@ -1,6 +1,10 @@
 .composition {
   width: 70%;
 
+  @include respond(tab-land) {
+    width: 50%;
+  }
+
   &__photo {
     position: relative;
     outline-offset: 2rem;
@@ -41,4 +45,10 @@
     // When I hover the composition, then I select that NOT is not hovered
     transform: scale(0.95);
   }
+
+  // &_layout {
+  //  @include respond(tab-land) {
+
+  // }
+  // }
 }

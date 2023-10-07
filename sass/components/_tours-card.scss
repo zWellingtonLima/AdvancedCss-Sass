@@ -1,9 +1,16 @@
 .toursCardLayout {
   display: flex;
-  max-width: 140rem;
-  margin: 0 auto;
+  // max-width: 140rem;
+  // margin: 0 auto;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 5rem;
+  padding: 0 2rem;
+
+  @include respond(tab-port) {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
 }
 
 .toursCard {
@@ -120,6 +127,10 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
+    @include respond(tab-port) {
+      padding: .5rem 1rem;
+    }
+
     &__1 {
       background-image: linear-gradient(
         to right bottom,
@@ -147,6 +158,10 @@
 
   &_details {
     padding: 1rem;
+
+    @include respond(tab-port) {
+      padding: 0;
+    }
 
     ul {
       display: flex;

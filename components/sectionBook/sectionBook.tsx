@@ -7,8 +7,8 @@ const SectionBook = () => {
         {/* TODO: Add functionality to this form. Send data to DB and so on. */}
         <div className={styles.book_form}>
           <form action="#" className={styles.form}>
-            <div className={styles.uMarginBottomMedium}>
-              <h2 className={styles.headingSecondary}>Start booking now</h2>
+            <div>
+              <h2 className={`${styles.headingSecondary} ${styles.uMarginBottomSmall}`}>Start booking now</h2>
             </div>
 
             <div className={styles.form_group}>

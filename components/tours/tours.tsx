@@ -25,7 +25,7 @@ const ToursPage = () => {
   return (
     <section className={styles.sectionTours}>
       <div className={styles.uCenterText}>
-        <h2 className={`${styles.headingSecondary} ${styles.uMarginBottomBig}`}>
+        <h2 className={styles.headingSecondary}>
           Most Popular Tours
         </h2>
       </div>

@@ -13,9 +13,11 @@
   align-items: center;
 
   max-width: 30rem;
+  flex: 1 1 30rem;
 
-  &:not(:last-child) {
-    margin-right: 6rem;
+  @include respond(tab-port) {
+    // flex-basis: 18rem;
+    padding: 2.5rem 2rem;
   }
 
   &Icon {

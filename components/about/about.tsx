@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section className={styles.sectionAbout}>
       <div className={styles.uCenterText}>
-        <h2 className={`${styles.headingSecondary} ${styles.uMarginBottomBig}`}>
+        <h2 className={styles.headingSecondary}>
           Exciting tours for adventurous people
         </h2>
       </div>
@@ -42,7 +42,7 @@ const About = () => {
             Learn more &rarr;
           </a>
         </div>
-        <div className={styles.compositionLayout}>
+        <div className={styles.composition_layout}>
           <div className={styles.composition}>
             {/* TODO: Fix props in Images */}
             <div

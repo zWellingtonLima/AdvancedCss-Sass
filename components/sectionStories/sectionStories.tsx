@@ -15,7 +15,7 @@ const SectionStories = () => {
         </video>
       </div>
 
-      <div className={`${styles.uCenterText} ${styles.uMarginBottomBig}`}>
+      <div className={styles.uCenterText}>
         <h2 className={styles.headingSecondary}>
           We make people genuinely happy
         </h2>

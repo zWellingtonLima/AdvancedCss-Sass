@@ -17,7 +17,7 @@ const Navigation = () => {
         <Menu
           strokeWidth={1.5}
           className={styles.navigation_button_icon}
-          size={60}
+          size={35}
         />
       </button>
       <div

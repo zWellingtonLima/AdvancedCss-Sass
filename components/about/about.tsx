@@ -45,34 +45,39 @@ const About = () => {
         <div className={styles.compositionLayout}>
           <div className={styles.composition}>
             {/* TODO: Fix props in Images */}
-            <Image
-              src={compPhoto1}
-              width={1000}
-              height={667}
-              layout="responsive"
-              sizes="(min-width: 740px) calc(50vw - 255px), calc(99vw - 608px)"
-              alt="Nature forest photo"
-              className={`${styles.composition__photo} ${styles.composition__photo_p1}`}
-            />
-
-            <Image
-              src={compPhoto2}
-              width={1000}
-              height={664}
-              layout="responsive"
-              sizes="(min-width: 740px) calc(50vw - 255px), calc(99vw - 608px)"
-              alt="Nature hills photo"
-              className={`${styles.composition__photo} ${styles.composition__photo_p2}`}
-            />
-            <Image
-              src={compPhoto3}
-              width={1000}
-              height={667}
-              layout="responsive"
-              sizes="(min-width: 740px) calc(50vw - 255px), calc(99vw - 608px)"
-              alt="Nature top mountains photo"
-              className={`${styles.composition__photo} ${styles.composition__photo_p3}`}
-            />
+            <div
+              className={`${styles.composition__photo_p1} ${styles.composition__photo}`}
+            >
+              <Image
+                src={compPhoto1}
+                layout="responsive"
+                sizes="(min-width: 740px) calc(50vw - 255px), calc(99vw - 608px)"
+                alt="Nature forest photo"
+                className={styles.composition__photo_style}
+              />
+            </div>
+            <div
+              className={`${styles.composition__photo_p3} ${styles.composition__photo}`}
+            >
+              <Image
+                src={compPhoto2}
+                layout="responsive"
+                sizes="(min-width: 740px) calc(50vw - 255px), calc(99vw - 608px)"
+                alt="Nature hills photo"
+                className={styles.composition__photo_style}
+              />
+            </div>
+            <div
+              className={`${styles.composition__photo_p2} ${styles.composition__photo}`}
+            >
+              <Image
+                src={compPhoto3}
+                layout="responsive"
+                sizes="(min-width: 740px) calc(50vw - 255px), calc(99vw - 608px)"
+                alt="Nature top mountains photo"
+                className={styles.composition__photo_style}
+              />
+            </div>
           </div>
         </div>
       </div>

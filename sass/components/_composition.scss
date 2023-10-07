@@ -1,39 +1,44 @@
 .composition {
-  position: relative;
-  width: 55%;
+  width: 70%;
 
   &__photo {
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
-    position: absolute;
-    border-radius: 2px;
-    transition: all 0.2s;
-    z-index: 1;
+    position: relative;
     outline-offset: 2rem;
+    backface-visibility: hidden;
+
+    &_style {
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+      border-radius: 4px;
+      position: absolute;
+      transition: all 0.2s;
+      z-index: 1;
+    }
 
     &_p1 {
-      top: -3rem;
-      left: -3rem;
+      top: -2rem;
+      left: -4rem;
     }
 
     &_p2 {
-      top: 3rem;
-      right: -24rem;
+      top: 14rem;
+      left: 6rem;
     }
 
     &_p3 {
-      top: 12rem;
-      left: 12rem;
+      top: 2rem;
+      left: 20rem;
     }
 
-    &:hover {
+    &:hover &_style {
       outline: 1.5rem solid $color-primary;
-      transform: scale(1.05) translateY(-.5rem);
+      transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
       z-index: 2;
     }
   }
 
-  &:hover &__photo:not(:hover) { // When I hover the composition, then I select that NOT is not hovered
+  &:hover &__photo_style:not(:hover) {
+    // When I hover the composition, then I select that NOT is not hovered
     transform: scale(0.95);
   }
 }

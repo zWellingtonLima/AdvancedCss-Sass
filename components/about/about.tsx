@@ -42,40 +42,41 @@ const About = () => {
             Learn more &rarr;
           </a>
         </div>
-        <div className={styles.composition_layout}>
-          <div className={styles.composition}>
+        <div className={styles.composition}>
+          <div className={styles.composition_layout}>
             {/* TODO: Fix props in Images */}
             <div
-              className={`${styles.composition__photo_p1} ${styles.composition__photo}`}
+              className={`${styles.composition__photo}`}
             >
               <Image
                 src={compPhoto1}
                 layout="responsive"
+                objectFit="contain"
                 sizes="(min-width: 740px) calc(50vw - 255px), calc(99vw - 608px)"
                 alt="Nature forest photo"
-                className={styles.composition__photo_style}
+                className={`${styles.composition__photo_style} ${styles.composition__photo_p1}`}
               />
             </div>
             <div
-              className={`${styles.composition__photo_p3} ${styles.composition__photo}`}
+              className={styles.composition__photo}
             >
               <Image
                 src={compPhoto2}
                 layout="responsive"
                 sizes="(min-width: 740px) calc(50vw - 255px), calc(99vw - 608px)"
                 alt="Nature hills photo"
-                className={styles.composition__photo_style}
+                className={`${styles.composition__photo_style} ${styles.composition__photo_p3}`}
               />
             </div>
             <div
-              className={`${styles.composition__photo_p2} ${styles.composition__photo}`}
+              className={styles.composition__photo}
             >
               <Image
                 src={compPhoto3}
                 layout="responsive"
                 sizes="(min-width: 740px) calc(50vw - 255px), calc(99vw - 608px)"
                 alt="Nature top mountains photo"
-                className={styles.composition__photo_style}
+                className={`${styles.composition__photo_style} ${styles.composition__photo_p2}`}
               />
             </div>
           </div>

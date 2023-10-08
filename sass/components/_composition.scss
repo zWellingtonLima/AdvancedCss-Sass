@@ -1,15 +1,28 @@
 .composition {
-  width: 70%;
+  height: 35rem;
 
-  @include respond(tab-land) {
-    width: 50%;
+  @include respond(phone) {
+    height: calc(30rem - 5vw);
+  }
+
+  &_layout {
+    width: 70%;
+    position: relative;
+
+    @include respond(tab-land) {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    @include respond(phone) {
+      width: 60%;
+    }
   }
 
   &__photo {
-    position: relative;
     outline-offset: 2rem;
     backface-visibility: hidden;
-
+    
     &_style {
       box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
       border-radius: 4px;
@@ -21,16 +34,51 @@
     &_p1 {
       top: -2rem;
       left: -4rem;
+
+      @include respond(tab-land) {
+        top: 0rem;
+        left: -25rem;
+      }
+
+      @include respond(tab-port) {
+        left: -20rem;
+      }
+
+      @include respond(phone) {
+        left: -7rem;
+      }
     }
 
     &_p2 {
       top: 14rem;
       left: 6rem;
+
+      @include respond(tab-land) {
+        top: -2rem;
+        left: 3rem;
+      }
+
+      @include respond(tab-land) {
+        top: -1rem;
+        left: 2rem;
+      }
     }
 
     &_p3 {
-      top: 2rem;
+      top: 0rem;
       left: 20rem;
+
+      @include respond(tab-land) {
+        left: 30rem;
+      }
+
+      @include respond(tab-port) {
+        left: 22rem;
+      }
+
+      @include respond(phone) {
+        left: 8rem;
+      }
     }
 
     &:hover &_style {
@@ -45,10 +93,4 @@
     // When I hover the composition, then I select that NOT is not hovered
     transform: scale(0.95);
   }
-
-  // &_layout {
-  //  @include respond(tab-land) {
-
-  // }
-  // }
 }

@@ -3,6 +3,10 @@
   padding: 15rem 0;
   font-size: 1.4rem;
 
+  @include respond(phone) {
+    padding: 10rem 2rem;
+  }
+
   &_logoBox {
     position: relative;
     height: 12rem;
@@ -12,12 +16,24 @@
   &_bottom {
     display: flex;
     justify-content: space-around;
+
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+    }
   }
   
   &_navigation {
     padding-top: 3rem;
     border-top: 1px solid $color-grey-dark;
     font-weight: bold;
+
+    @include respond(tab-port) {
+      padding: 3rem 1rem;
+    }
+
+    @include respond(phone) {
+      padding: 3rem 2rem;
+    }
   }
 
   &_list {

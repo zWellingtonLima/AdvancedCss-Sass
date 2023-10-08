@@ -252,15 +252,29 @@
 }
 
 .composition {
+  height: 35rem;
+}
+@media (max-width: 37.5rem) {
+  .composition {
+    height: calc(30rem - 5vw);
+  }
+}
+.composition_layout {
   width: 70%;
+  position: relative;
 }
 @media (max-width: 75em) {
-  .composition {
+  .composition_layout {
     width: 50%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 37.5rem) {
+  .composition_layout {
+    width: 60%;
   }
 }
 .composition__photo {
-  position: relative;
   outline-offset: 2rem;
   backface-visibility: hidden;
 }
@@ -275,13 +289,56 @@
   top: -2rem;
   left: -4rem;
 }
+@media (max-width: 75em) {
+  .composition__photo_p1 {
+    top: 0rem;
+    left: -25rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .composition__photo_p1 {
+    left: -20rem;
+  }
+}
+@media (max-width: 37.5rem) {
+  .composition__photo_p1 {
+    left: -7rem;
+  }
+}
 .composition__photo_p2 {
   top: 14rem;
   left: 6rem;
 }
+@media (max-width: 75em) {
+  .composition__photo_p2 {
+    top: -2rem;
+    left: 3rem;
+  }
+}
+@media (max-width: 75em) {
+  .composition__photo_p2 {
+    top: -1rem;
+    left: 2rem;
+  }
+}
 .composition__photo_p3 {
-  top: 2rem;
+  top: 0rem;
   left: 20rem;
+}
+@media (max-width: 75em) {
+  .composition__photo_p3 {
+    left: 30rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .composition__photo_p3 {
+    left: 22rem;
+  }
+}
+@media (max-width: 37.5rem) {
+  .composition__photo_p3 {
+    left: 8rem;
+  }
 }
 .composition__photo:hover .composition__photo_style {
   outline: 1.5rem solid #55c57a;
@@ -336,6 +393,11 @@
   border-bottom: 3px solid transparent;
   display: block;
   transition: all 0.3s;
+}
+@media (max-width: 56.25em) {
+  .form_input {
+    width: 100%;
+  }
 }
 .form_input:focus {
   outline: none;
@@ -747,6 +809,12 @@
   color: #28b485;
   transition: all 0.3s;
 }
+@media (max-width: 75em) {
+  .navigation_button {
+    top: 4rem;
+    right: 4rem;
+  }
+}
 .navigation_button:hover {
   color: #7ed56f;
 }
@@ -817,6 +885,16 @@
   padding: 25rem 0;
   margin-top: -20vh;
 }
+@media (max-width: 75em) {
+  .sectionAbout {
+    padding: 25rem 0 17rem 0;
+  }
+}
+@media (max-width: 56.25em) {
+  .sectionAbout {
+    padding: 25rem 0 13rem 0;
+  }
+}
 .sectionAbout__layout {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -826,8 +904,18 @@
 @media (max-width: 75em) {
   .sectionAbout__layout {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr auto;
     gap: 4rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .sectionAbout__layout {
+    padding: 0 10rem;
+  }
+}
+@media (max-width: 37.5rem) {
+  .sectionAbout__layout {
+    padding: 0 5rem;
   }
 }
 
@@ -845,7 +933,7 @@
 }
 @media (max-width: 56.25em) {
   .sectionFeature {
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
 }
 .sectionFeatureDesign {
@@ -885,6 +973,11 @@
     padding: 8rem 0;
   }
 }
+@media (max-width: 75em) {
+  .sectionStories {
+    padding: 8rem 0 4rem 0;
+  }
+}
 
 .sectionBook {
   padding: 15rem 0;
@@ -909,6 +1002,11 @@
     background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 60%, transparent 60%), url(../public/images/nat-10.jpg);
   }
 }
+@media (max-width: 37.5rem) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%), url(../public/images/nat-10.jpg);
+  }
+}
 .book_form {
   width: 50%;
   padding: 4rem;
@@ -919,11 +1017,22 @@
     padding: 3rem;
   }
 }
+@media (max-width: 37.5rem) {
+  .book_form {
+    width: 100%;
+    padding: 2rem;
+  }
+}
 
 .footer {
   background-color: #333;
   padding: 15rem 0;
   font-size: 1.4rem;
+}
+@media (max-width: 37.5rem) {
+  .footer {
+    padding: 10rem 2rem;
+  }
 }
 .footer_logoBox {
   position: relative;
@@ -934,10 +1043,25 @@
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 56.25em) {
+  .footer_bottom {
+    flex-wrap: wrap;
+  }
+}
 .footer_navigation {
   padding-top: 3rem;
   border-top: 1px solid #777;
   font-weight: bold;
+}
+@media (max-width: 56.25em) {
+  .footer_navigation {
+    padding: 3rem 1rem;
+  }
+}
+@media (max-width: 37.5rem) {
+  .footer_navigation {
+    padding: 3rem 2rem;
+  }
 }
 .footer_list {
   list-style: none;

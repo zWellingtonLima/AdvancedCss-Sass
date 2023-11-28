@@ -23,6 +23,10 @@
 // ORDER: Base (like this bellow) + typograph > general layout + grid > page layout > components
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == minimun-phone {
+    @media (max-width: 23.5rem) { @content }; // ~375px
+  }
+
   @if $breakpoint == phone {
     @media (max-width: 37.5rem) { @content }; // 600px
   }

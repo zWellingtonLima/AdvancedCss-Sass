@@ -23,7 +23,7 @@ const ToursPage = () => {
   }, [onClose]);
 
   return (
-    <section className={styles.sectionTours}>
+    <section className={styles.sectionTours} id="tours">
       <div className={styles.uCenterText}>
         <h2 className={styles.headingSecondary}>
           Most Popular Tours

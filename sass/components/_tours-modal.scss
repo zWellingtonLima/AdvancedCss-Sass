@@ -18,10 +18,23 @@
     width: 80%;
     margin: 0 auto;
     background-color: rgba($color-white, 0.95);
-    height: 70vh;
+    height: 80vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
     z-index: 7;
+
+    @include respond(tab-land) {
+      width: 95%;
+    }
+
+    @include respond(phone) {
+      height: 95vh;
+    }
+
+    @include respond(minimun-phone) {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: none;
+    }
   }
 
   &_photos {
@@ -29,10 +42,20 @@
     display: flex;
     flex-direction: column;
 
+    @include respond(minimun-phone) {
+     align-items: center;
+     order: 2;
+     padding-bottom: 5px;
+    }
+
     &_layout {
       position: inherit;
       width: 100%;
       height: 100%;
+
+      @include respond(phone) {
+        width: 90%;
+      }
     }
   }
 
@@ -49,6 +72,19 @@
   justify-content: center;
   gap: 2rem;
 
+  @include respond(tab-land) {
+    padding: 4rem;
+  }
+
+  @include respond(phone) {
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  @include respond(minimun-phone) {
+    order: 1;
+  }
+
   &_button {
     border: none;
     position: absolute;
@@ -63,6 +99,11 @@
     &:hover {
       background-color: #ddd;
     }
+
+    @include respond(minimun-phone) {
+      right: 1rem;
+      top: 1rem;
+    }
   }
 
   &_paragraph {
@@ -76,12 +117,25 @@
     display: flex;
     font-size: $default-font-size;
 
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
+
     &_detail {
+      padding-right: 10px;
       border-right: 1px solid #ddd;
+
+      @include respond(tab-land) {
+       border: none;
+      }
     }
   }
 
   &_cta {
     align-self: flex-start;
+
+    @include respond(minimun-phone) {
+      align-self: center;
+    }
   }
 }

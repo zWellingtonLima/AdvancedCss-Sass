@@ -17,7 +17,7 @@ const Header = () => {
       <div className={styles.header__textBox}>
         <HeadingPrimary />
 
-        <a href="#" className={`${styles.btn_animated} ${styles.btn} ${styles.btn_white}`}>
+        <a href="#tours" className={`${styles.btn_animated} ${styles.btn} ${styles.btn_white}`}>
           Discover our tours
         </a>
       </div>

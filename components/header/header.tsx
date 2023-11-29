@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import styles from "@/app/page.module.css";
 import HeadingPrimary from "../HeadingPrimary";
+import logoImage from '@/public/images/logo-white.png'
 
 const Header = () => {
   return (
@@ -9,9 +10,8 @@ const Header = () => {
       <div className={styles.header__logoBox}>
         <Image
           alt="Natours logo"
-          width={80}
-          height={40}
-          src="/images/logo-white.png"
+          src={logoImage}
+          className={styles.header__logoBox_image}
         />
       </div>
       <div className={styles.header__textBox}>

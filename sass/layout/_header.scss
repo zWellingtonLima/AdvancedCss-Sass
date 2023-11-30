@@ -20,7 +20,7 @@
     top: 1rem;
 
     &_image {
-      width: 10vw;
+      max-width: 10rem;
       object-fit: contain;
 
       @include respond(phone) {

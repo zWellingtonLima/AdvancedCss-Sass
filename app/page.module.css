@@ -848,7 +848,7 @@
   top: 1rem;
 }
 .header__logoBox_image {
-  width: 10vw;
+  max-width: 10rem;
   object-fit: contain;
 }
 @media (max-width: 37.5rem) {

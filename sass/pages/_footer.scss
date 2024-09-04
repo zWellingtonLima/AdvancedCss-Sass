@@ -4,7 +4,7 @@
   font-size: 1.4rem;
 
   @include respond(phone) {
-    padding: 10rem 2rem;
+    padding: 10rem .5rem;
   }
 
   &_logoBox {
@@ -32,7 +32,7 @@
     }
 
     @include respond(phone) {
-      padding: 3rem 2rem;
+      // padding: 3rem 2rem;
     }
   }
 

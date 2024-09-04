@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
 
         <p className={styles.footer_copyright}>
-          Built my <a href="#" className={styles.footer_link}>Jonas Schmedtmann</a> for his online Udemy CSS online course.
+          Design made by <a href="#" className={styles.footer_link}>Jonas Schmedtmann</a> for his online Udemy CSS online course.
         </p>
       </div>
     </footer>

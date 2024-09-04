@@ -1107,7 +1107,7 @@
 }
 @media (max-width: 37.5rem) {
   .footer {
-    padding: 10rem 2rem;
+    padding: 10rem 0.5rem;
   }
 }
 .footer_logoBox {
@@ -1132,11 +1132,6 @@
 @media (max-width: 56.25em) {
   .footer_navigation {
     padding: 3rem 1rem;
-  }
-}
-@media (max-width: 37.5rem) {
-  .footer_navigation {
-    padding: 3rem 2rem;
   }
 }
 .footer_list {

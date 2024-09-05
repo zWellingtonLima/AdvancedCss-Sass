@@ -9,8 +9,8 @@ const SectionStories = () => {
     <section className={styles.sectionStories}>
       <div className={styles.bgVideo}>
         <video className={styles.bgVideo_content} autoPlay muted loop>
-          <source src="/vid/video.mp4" type="video/mp4" />
-          <source src="/vid/video.webm" type="video/webm" />
+          <source src="./vid/video.mp4" type="video/mp4" />
+          <source src="./vid/video.webm" type="video/webm" />
           Your browser is not supported!
         </video>
       </div>
